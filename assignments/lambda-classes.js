@@ -55,7 +55,7 @@ class ProjectManager extends Instructor {
         return `${this.name} announces to ${channel}, @channel StandUp time!`
     }
     debugsCode(subject, student){
-        return ${this.name} debugs ${student.name}'s code on ${subject}'
+        return `${this.name} debugs ${student.name}'s code on ${subject}'
     }
 
 }
@@ -90,7 +90,7 @@ const alex = new Student({
     previousBackground: 'waiter',
     className: 'WebPT5',
     favSubject: ['HTML5', 'CSS3', 'JavaScript'],
-})
+});
 
 //New instructor
 
@@ -102,8 +102,40 @@ const christina = new Instructor({
     specialty: 'Teaching',
     favLanguage: 'JavaScript, HTML5',
     catchPhrase: 'Don/t Bother Me'
-})
+});
 
 //New PM
 
+const brandon = new ProjectManager({
+    name: 'Brandon',
+    age: 40,
+    location: 'San Diego, CA',
+    gender: 'M',
+    gradClassName: 'CS3',
+    favInstructor: 'Cam Pope'
+});
+
+dj.speak();
+josh.speak();
+alex.speak();
+christina.speak();
+brandon.speak();
+
+christina.demo();
+christina.grade();
+
+dj.listsSubjects();
+josh.listsSubjects();
+alex.listsSubjects();
+
+dj.PRAssignments();
+josh.PRAssignments();
+alex.PRAssignments();
+
+dj.sprintChallenge();
+josh.sprintChallenge();
+alex.sprintChallenge();
+
+brandon.standUp();
+brandon.debugsCode();
 
