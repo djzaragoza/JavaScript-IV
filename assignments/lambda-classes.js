@@ -45,3 +45,65 @@ class Student extends Person {
     }
 }
 
+class ProjectManager extends Instructor {
+    constructor(values){
+        super(values);
+        this.gradClassName = values.gradClassName;
+        this.favInstructor = values.favInstructor;
+    }
+    standUp(channel){
+        return `${this.name} announces to ${channel}, @channel StandUp time!`
+    }
+    debugsCode(subject, student){
+        return ${this.name} debugs ${student.name}'s code on ${subject}'
+    }
+
+}
+
+//students
+
+const dj = new Student ({
+    name: 'DJ',
+    age: 35,
+    location: 'Woodland, WA',
+    gender: 'M',
+    previousBackground: 'Accountant',
+    className: 'WebPT5',
+    favSubjects: ['HTML5', 'CSS3', 'JavaScript'],
+});
+
+const josh = new Student ({
+    name: 'Josh',
+    age: 26,
+    location: 'Chicago, IL',
+    gender: 'M', 
+    previousBackground: 'Mechanic',
+    className: 'WebPT5',
+    favSubject: ['HTML5', 'CSS3', 'JavaScript'],
+});
+
+const alex = new Student({
+    name: 'Alex',
+    age: 30,
+    location: 'Seattle, WA',
+    gender: 'M',
+    previousBackground: 'waiter',
+    className: 'WebPT5',
+    favSubject: ['HTML5', 'CSS3', 'JavaScript'],
+})
+
+//New instructor
+
+const christina = new Instructor({
+    name: 'Christina',
+    age: 30,
+    location: 'Denver, CO',
+    gender: 'F',
+    specialty: 'Teaching',
+    favLanguage: 'JavaScript, HTML5',
+    catchPhrase: 'Don/t Bother Me'
+})
+
+//New PM
+
+
